@@ -1,11 +1,15 @@
 package org.example;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MainTest {
 
     @Test
+    @DisplayName("Check correct input for anagram")
     void isAnagramTestForCorrectAnagrams() {
         assertTrue(Main.isAnagram("study", "dusty"));
     }
@@ -32,7 +36,7 @@ class MainTest {
 
     @Test
     void isAnagramTestForSpaceSensitive() {
-        assertFalse(Main.isAnagram("act ", "cat"));
+        assertFalse(Main.isAnagram("acts ", "cats"));
     }
 }
 
